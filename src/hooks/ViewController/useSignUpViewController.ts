@@ -33,14 +33,14 @@ export function useSignUpViewController() {
     formState: {isValid},
   } = useForm<{email: string; password: string}>({
     defaultValues: {
-      email: 'vinhan.dev@gmail.com',
-      password: '1234567',
+      email: '',
+      password: '',
     },
     resolver: zodResolver(schema),
     mode: 'onChange',
   });
 
-  const [isChecked, setChecked] = useState(true);
+  const [isChecked, setChecked] = useState(false);
 
   function handleGoBack() {
     Alert.alert('Not available');
@@ -61,7 +61,7 @@ export function useSignUpViewController() {
       return null;
     }
     const signUpParams: SignUpRequestPayload = {
-      email,
+      email: email.trim().toLowerCase(),
       password,
       firstName: 'Tester',
       lastName: 'Mr',

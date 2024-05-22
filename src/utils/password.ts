@@ -1,7 +1,13 @@
 import theme from '#/theme';
 
 export function checkValueLengthValid(value: string) {
-  if (value?.length > 6) {
+  if (value?.length >= 6) {
+    return true;
+  }
+  return false;
+}
+export function checkValueLengthNotTooMuch(value: string) {
+  if (value?.length <= 18) {
     return true;
   }
   return false;
@@ -27,6 +33,13 @@ export function checkPassword(value: string) {
 
   if (checkValueLengthValid(value)) {
     passwordPoint++;
+    if (!checkValueLengthNotTooMuch(value)) {
+      return {
+        color: theme.colorWhiteHalf,
+        passwordText: 'Too Long',
+        progress: 0,
+      };
+    }
     if (checkContainDigit(value)) {
       passwordPoint++;
     }

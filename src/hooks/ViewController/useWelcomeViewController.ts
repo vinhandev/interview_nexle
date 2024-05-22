@@ -11,7 +11,7 @@ import {useWelcomeViewModel} from '../ViewModel';
 
 const welcomeTitle = 'Wellcome to Nexle Entrance Test';
 const welcomeDescription =
-  'Please select categories what you would like to \n see on your feed. You can set this later on Filter.';
+  'Please select categories what you would like to \nsee on your feed. You can set this later on Filter.';
 
 export function useWelcomeViewController() {
   const {categories, error, loading} = useWelcomeViewModel();

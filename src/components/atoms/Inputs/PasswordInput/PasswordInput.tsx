@@ -76,7 +76,9 @@ export default function PasswordInput({name, control, label}: Props) {
         </TouchableOpacity>
       </View>
       <View style={passwordBar} />
-      <Text style={[styles.passwordText, passwordColor]}>{passwordText}</Text>
+      {isDirty && (
+        <Text style={[styles.passwordText, passwordColor]}>{passwordText}</Text>
+      )}
     </View>
   );
 }

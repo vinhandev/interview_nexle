@@ -2,7 +2,6 @@ import React from 'react';
 import {Image, ImageProps, View, ViewProps} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import {ActivityIndicator} from 'react-native-paper';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {LoadingView} from '#/components/molecules';

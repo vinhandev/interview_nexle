@@ -51,13 +51,10 @@ const slice = createSlice<
     });
     builder.addCase(getAllCategoriesThunk.fulfilled, (state, action) => {
       state.loading = false;
-
-      console.log('CATE', action.payload);
       state.categories = action.payload;
     });
     builder.addCase(getAllCategoriesThunk.rejected, (state, action) => {
       state.loading = false;
-      console.log('j v ', action.payload);
       state.error = (action.payload as Error).message;
     });
   },

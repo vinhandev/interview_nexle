@@ -5,17 +5,19 @@ import theme from '#/theme';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: theme.space24,
+    paddingHorizontal: theme.space16,
+    paddingTop: 10,
   },
   headerWrapper: {
     gap: theme.space12,
-    paddingBottom: theme.space12,
+    paddingBottom: 8,
   },
   headerRowWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingBottom: 120,
+    paddingHorizontal: 8,
+    paddingBottom: 100,
   },
   backButton: {
     padding: 20,
@@ -49,5 +51,6 @@ export const styles = StyleSheet.create({
     fontSize: theme.fontSize14,
     color: theme.colorWhite,
     fontFamily: theme.fontFamily,
+    lineHeight: 22,
   },
 });

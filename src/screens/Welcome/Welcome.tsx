@@ -41,7 +41,7 @@ export default function Welcome() {
       loading={loading}
       style={styles.container}
       image={images.BG_CATEGORIES}
-      locations={[0.1, 0.31]}
+      locations={[0.05, 0.35]}
       background={theme.colorBlack}>
       <View style={styles.headerRowWrapper}>
         <TouchableOpacity style={styles.backButton} onPress={handleGoBack}>

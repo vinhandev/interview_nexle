@@ -12,7 +12,6 @@ export function useSignUpViewModel() {
   const error = useSelector(signUpError);
 
   function dispatchSignUpUser(params: SignUpRequestPayload) {
-    console.log('sign up');
     dispatch(signUpUserThunk(params));
   }
 

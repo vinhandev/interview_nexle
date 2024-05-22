@@ -3,7 +3,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {CategoryPayload} from '#/types/categories';
 
 export const storeAccessToken = async (value: string) => {
-  console.log('token acccessToken', value);
   await AsyncStorage.setItem('accessToken', value);
 };
 export const getAccessToken = async () => {
